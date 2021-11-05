@@ -1,7 +1,8 @@
 FROM hashicorp/terraform:latest
 
 WORKDIR /opt
-ADD main.tf /opt/
+ADD init.tf /opt/
+RUN terraform init
 
 EXPOSE 8080
 
